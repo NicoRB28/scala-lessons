@@ -26,10 +26,11 @@ object RationalDos extends App {
         denominator * that.denominator
       )
 
-    def neg():Rational = new Rational(-numerator, denominator)
+    //def neg():Rational = new Rational(-numerator, denominator)
+    def unary_- :Rational = new Rational(-numerator, denominator)
 
     def - (that: Rational): Rational =
-      this + that.neg()
+      this + -that
 
     /**
      * Es mejor la opcion de simplificar en la construccion del racional
@@ -47,8 +48,8 @@ object RationalDos extends App {
   val rational4 = new Rational(2, 5)
   println("4/7 - 2/5 = " + (rational3 - rational4))
 
-  val rational5 = new Rational(5, 8).neg()
-  val rational6 = new Rational(6, 7).neg()
+  val rational5 = -(new Rational(5, 8))// unary operator usage
+  val rational6 = -(new Rational(6, 7))
   println("(-5/8) - (-6/7) = " + (rational5 - rational6))
 
   val y = new Rational(5, 7)
@@ -56,7 +57,7 @@ object RationalDos extends App {
 
   val x = new Rational(1, 3)
 
-  println("1/3 < 5/7 = " + (x - y))
+  println("1/3 < 5/7 = " + (x < y))
   println("max(1/3, 5/7) = " + x.max(y))
 
   //val strange = new Rational(1, 0)
