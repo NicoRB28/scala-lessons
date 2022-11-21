@@ -1,7 +1,6 @@
 package week3
 
 import java.util.NoSuchElementException
-import scala.annotation.tailrec
 
 trait List[T] {
   def isEmpty: Boolean
