@@ -1,9 +1,5 @@
 package objsets
 
-import TweetReader._
-
-import scala.collection.View.Empty
-
 /**
  * A class to represent tweets.
  */
