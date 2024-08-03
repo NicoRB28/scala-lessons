@@ -25,6 +25,10 @@ def tailFactorial(x: Int): Int = {
   }
   f(1, 1)
 }
+//analisis de tailFactorial
+// 1 > 2 no, entonces f(currentIter = 1+1, posibleResult = 1*1)
+  //2>2 no, entonces  f(currentIter  = 2+1, posibleResult  = 1*2)
+    //3>2 si, entonces 2 fin
 
 def pascal(c: Int, r: Int): Int = {
   tailFactorial(r) / (tailFactorial(c) * tailFactorial(c))
